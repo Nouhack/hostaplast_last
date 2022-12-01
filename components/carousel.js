@@ -27,29 +27,35 @@ export default class NextJsCarousel extends Component {
       },
     ];
     return (
-      <Carousel showThumbs={false} emulateTouch={true} autoPlay={true}>
-        {images.map((item, index) => {
-          return (
-            <div key={index} className="w-full">
-              <img className="h-96 object-cover" src={item.img} alt="image1" />
-              <button
-                className="legend"
-                style={{
-                  backgroundColor: "rgba(0,0,0,0.5)",
-                  color: "black",
-                  fontSize: "2rem",
-                  borderBottom: "solid",
-                  borderBottomWidth: "2px",
-                  borderBottomColor: "black",
-                  borderRadius: "0px",
-                }}
-              >
-                {item.name}
-              </button>
-            </div>
-          );
-        })}
-      </Carousel>
+      <div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+        <Carousel showThumbs={false} emulateTouch={true} autoPlay={true}>
+          {images.map((item, index) => {
+            return (
+              <div key={index} className="w-full">
+                <img
+                  className="h-96 object-cover"
+                  src={item.img}
+                  alt="image1"
+                />
+                <button
+                  className="legend"
+                  style={{
+                    backgroundColor: "rgba(0,0,0,0.5)",
+                    color: "black",
+                    fontSize: "2rem",
+                    borderBottom: "solid",
+                    borderBottomWidth: "2px",
+                    borderBottomColor: "black",
+                    borderRadius: "0px",
+                  }}
+                >
+                  {item.name}
+                </button>
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
     );
   }
 }

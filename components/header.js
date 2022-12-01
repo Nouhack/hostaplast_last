@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { attributes, react as HomeContent } from "../content/aboutus.md";
 
 export default function Header() {
   const [moved, setmoved] = useState(false);
+  let { logo, logolabel, theme } = attributes;
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -28,19 +30,12 @@ export default function Header() {
     >
       <div class="relative container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-          >
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-          </svg>
-          <span class="ml-3 text-xl">Tailblocks</span>
+          <img
+            class={`w-10 h-10 text-white p-2 ${theme} rounded-full`}
+            src={logo}
+            alt="logo"
+          />
+          <span class="ml-3 text-xl">{logolabel}</span>
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <Link href="/" class="mr-5 hover:text-gray-900 cursor-pointer">

@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: main # Branch to update (optional; defaults to master)
 media_folder: public/img
 public_folder: img
@@ -7,6 +7,20 @@ collections:
   - name: "generalinfo"
     label: "Information general"
     files:
+      - label: "Les metadata du website"
+        name: "metadata"
+        file: "content/metadata.md"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "logo label", name: "logolabel", widget: "string" }
+          - {
+              label: "Theme color",
+              name: "theme",
+              widget: "color",
+              enableAlpha: true,
+              allowInput: true,
+            }
+
       - label: "À propos de nous"
         name: "aboutus"
         file: "content/aboutus.md"
