@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import "../styles/globals.css";
 import Header from "../components/header";
 import DownloadApps from "../components/DownloadApps";
@@ -8,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
       </Head>
       <Header />
       <Component {...pageProps} />
