@@ -1,5 +1,5 @@
 import React from "react";
-import { attributes, react as HomeContent } from "../content/aboutus.md";
+import { attributes, react as HomeContent } from "../content/value.md";
 
 export default function value() {
   let { body } = attributes;
