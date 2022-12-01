@@ -42,3 +42,9 @@ collections:
         file: "content/value.md"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Nos fonctionnalités"
+        name: "features"
+        file: "content/features.md"
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }

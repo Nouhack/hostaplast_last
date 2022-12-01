@@ -30,11 +30,7 @@ export default function Header() {
     >
       <div class="relative container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <img
-            class={`w-10 h-10 text-white p-2 rounded-full`}
-            src={logo}
-            alt="logo"
-          />
+          <img class={`h-10 text-white  `} src={logo} alt="logo" />
           <span class="ml-3 text-xl">{logolabel}</span>
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
@@ -110,7 +106,7 @@ export default function Header() {
         <button
           type="button"
           className={`inline-flex items-center  border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0`}
-          style={{ backgroundColor: theme }}
+          style={{ backgroundColor: theme, color: "white" }}
         >
           <Link
             href="/client"

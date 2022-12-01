@@ -1,6 +1,8 @@
 import React from "react";
+import { attributes, react as HomeContent } from "../../content/metadata.md";
 
 export default function index() {
+  let { logo, logolabel, theme } = attributes;
   const news = [
     {
       id: 1,
@@ -48,7 +50,10 @@ export default function index() {
                   <p class="leading-relaxed text-base">{item.description}</p>
                   <button
                     type="button"
-                    class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"
+                    className="flex mx-auto mt-6 text-white border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"
+                    style={{
+                      backgroundColor: theme,
+                    }}
                   >
                     Lire...
                   </button>

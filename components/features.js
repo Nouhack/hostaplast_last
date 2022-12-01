@@ -60,7 +60,7 @@ export default function Features() {
                     </h2>
                     <p class="leading-relaxed text-base">{item.description}</p>
                     <a
-                      class="mt-3  inline-flex items-center"
+                      class="mt-3 cursor-pointer inline-flex items-center"
                       style={{
                         color: theme,
                       }}
