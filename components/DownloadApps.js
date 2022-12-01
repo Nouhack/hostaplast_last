@@ -1,11 +1,18 @@
 import React from "react";
+import { attributes, react as HomeContent } from "../content/metadata.md";
 
 export default function DownloadApps() {
+  let { logo, logolabel, theme } = attributes;
   return (
     <div>
       <div class="container px-5 py-5 mx-auto flex items-center md:flex-row flex-col">
         <div class="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
-          <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
+          <h2
+            className={`text-xs  tracking-widest font-medium title-font mb-1 text-base`}
+            style={{
+              color: `${theme}`,
+            }}
+          >
             <a href="" class="link"></a>Télécharger la version de
             l&#039;application mobile
           </h2>

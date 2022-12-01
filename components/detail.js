@@ -1,6 +1,8 @@
 import React from "react";
+import { attributes, react as HomeContent } from "../content/metadata.md";
 
 export default function Detail() {
+  let { logo, logolabel, theme } = attributes;
   return (
     <div>
       <header class="text-gray-600 body-font"></header>
@@ -29,7 +31,7 @@ export default function Detail() {
             <div class="flex justify-center">
               <button
                 type="button"
-                class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                class={`inline-flex text-white bg-[${theme}] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg`}
               >
                 Détails
               </button>
