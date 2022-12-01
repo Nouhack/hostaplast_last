@@ -1,5 +1,5 @@
 ---
-logo: img/1-sim800l-sms-relay_schematic.png
-logolabel: nouh
+logo: http://hostaplast.com/rd/wp-content/uploads/2017/03/Logo.png
+logolabel: " "
 theme: "#ff0000"
 ---
