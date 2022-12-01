@@ -76,7 +76,7 @@ export default function Header() {
                   borderColor: theme,
                 }}
               >
-                <Link href="#">Fonctionnalités</Link>
+                <Link href="/features">Fonctionnalités</Link>
               </div>
 
               <div
@@ -85,7 +85,7 @@ export default function Header() {
                   borderColor: theme,
                 }}
               >
-                <Link href="#">Solution</Link>
+                <Link href="/solution">Solution</Link>
               </div>
             </div>
           </div>
