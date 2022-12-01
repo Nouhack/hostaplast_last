@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Header from "../components/header";
 import Carousel from "../components/carousel";
 import Details from "../components/detail";
 import Features from "../components/features";

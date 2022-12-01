@@ -34,7 +34,7 @@ export default function index() {
           <div class="flex flex-wrap -mx-4 -mb-10 text-center">
             {news.map((item, index) => {
               return (
-                <div class="sm:w-1/2 mb-10 px-4">
+                <div class="sm:w-1/2 mb-10 px-4" key={index}>
                   <div class="rounded-lg h-64 overflow-hidden">
                     <img
                       alt="content"
