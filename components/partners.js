@@ -1,17 +1,8 @@
 import React from "react";
 
-export default function partners() {
+export default function Partners() {
   return (
     <div>
-      <header class="text-gray-600 body-font"></header>
-      <section class="text-gray-600 body-font overflow-hidden"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
           <h1 class="text-3xl font-medium title-font text-gray-900 mb-12 text-center">

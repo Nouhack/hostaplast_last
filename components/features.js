@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function features() {
+export default function Features() {
   return (
     <div>
       <header class="text-gray-600 body-font"></header>

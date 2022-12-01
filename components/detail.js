@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function detail() {
+export default function Detail() {
   return (
     <div>
       <header class="text-gray-600 body-font"></header>

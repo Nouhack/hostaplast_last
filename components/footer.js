@@ -1,23 +1,8 @@
 import React from "react";
 
-export default function footer() {
+export default function Footer() {
   return (
     <div>
-      <header class="text-gray-600 body-font"></header>
-      <section class="text-gray-600 body-font overflow-hidden"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <section class="text-gray-600 body-font"></section>
-      <footer class="text-gray-600 body-font"></footer>
       <footer class="text-gray-600 body-font">
         <div class="bg-gray-100"></div>
       </footer>
