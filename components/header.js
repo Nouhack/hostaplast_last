@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { attributes, react as HomeContent } from "../content/aboutus.md";
+import { attributes, react as HomeContent } from "../content/metadata.md";
 
 export default function Header() {
   const [moved, setmoved] = useState(false);
