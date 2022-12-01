@@ -1,5 +1,5 @@
 ---
-logo: "img/1-sim800l-sms-relay_schematic.png"
+logo: img/1-sim800l-sms-relay_schematic.png
 logolabel: nouh
-theme: "#000000"
+theme: "#ff0000"
 ---
