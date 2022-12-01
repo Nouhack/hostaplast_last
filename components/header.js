@@ -49,16 +49,21 @@ export default function Header() {
               className={`hidden z-50 bg-white px-10 py-6  rounded-lg group-hover:block absolute
               `}
             >
-              <div className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5">
-                <Link
-                  href="/aboutus"
-                  className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5"
-                >
-                  À propos de nous
-                </Link>
+              <div
+                className="hover:border-b-2 hover:border-solid cursor-pointer mt-5"
+                style={{
+                  borderColor: theme,
+                }}
+              >
+                <Link href="/aboutus">À propos de nous</Link>
               </div>
-              <div className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5">
-                Valeurs
+              <div
+                className="hover:border-b-2  hover:border-solid cursor-pointer mt-5"
+                style={{
+                  borderColor: theme,
+                }}
+              >
+                <Link href="/value">Valeurs</Link>
               </div>
             </div>
           </div>
@@ -69,11 +74,22 @@ export default function Header() {
               className="hidden z-50 bg-white px-10 py-6  rounded-lg group-hover:block absolute
             "
             >
-              <div className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5">
-                Fonctionnalités
+              <div
+                className="hover:border-b-2  hover:border-solid cursor-pointer mt-5"
+                style={{
+                  borderColor: theme,
+                }}
+              >
+                <Link href="#">Fonctionnalités</Link>
               </div>
-              <div className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5">
-                Solution
+
+              <div
+                className="hover:border-b-2  hover:border-solid cursor-pointer mt-5"
+                style={{
+                  borderColor: theme,
+                }}
+              >
+                <Link href="#">Solution</Link>
               </div>
             </div>
           </div>
