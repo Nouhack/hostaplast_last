@@ -21,6 +21,14 @@ collections:
               allowInput: true,
             }
 
+      - label: "Notre solution"
+        name: "solution"
+        file: "content/solution.md"
+        fields:
+          - { label: "image", name: "image", widget: "image" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+
       - label: "À propos de nous"
         name: "aboutus"
         file: "content/aboutus.md"

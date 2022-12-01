@@ -38,10 +38,7 @@ export default function Header() {
           <span class="ml-3 text-xl">{logolabel}</span>
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <Link
-            href="/"
-            class={`mr-5 hover:text-[${theme}] hover:text-gray-900 cursor-pointer`}
-          >
+          <Link href="/" class={`mr-5 hover:text-[${theme}]   cursor-pointer`}>
             Accueil
           </Link>
           <div className="group">
@@ -67,7 +64,7 @@ export default function Header() {
           </div>
 
           <div className="group">
-            <a class="mr-5 hover:text-gray-900 cursor-pointer">Solutions ↓</a>
+            <a class="mr-5 hover:text-gray-900 cursor-pointer">Avantages ↓</a>
             <div
               className="hidden z-50 bg-white px-10 py-6  rounded-lg group-hover:block absolute
             "
@@ -76,7 +73,7 @@ export default function Header() {
                 Fonctionnalités
               </div>
               <div className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5">
-                Avantages
+                Solution
               </div>
             </div>
           </div>
@@ -96,11 +93,12 @@ export default function Header() {
         </nav>
         <button
           type="button"
-          class={`inline-flex items-center  bg-[${theme}] border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0`}
+          className={`inline-flex items-center  border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0`}
+          style={{ backgroundColor: theme }}
         >
           <Link
             href="/client"
-            className={`mr-5 hover:text-gray-900  cursor-pointer`}
+            className={`mr-5 hover:text-gray-900 cursor-pointer`}
           >
             Espace client
           </Link>
