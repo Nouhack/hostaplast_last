@@ -4,7 +4,6 @@ import Carousel from "../components/carousel";
 import Details from "../components/detail";
 import Features from "../components/features";
 import Partners from "../components/partners";
-import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
       <Details />
       <Features />
       <Partners />
-      <Footer />
     </div>
   );
 }

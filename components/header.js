@@ -55,7 +55,12 @@ export default function header() {
               `}
             >
               <div className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5">
-                À propos de nous
+                <Link
+                  href="/aboutus"
+                  className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5"
+                >
+                  À propos de nous
+                </Link>
               </div>
               <div className="hover:border-b-2 hover:border-black hover:border-solid cursor-pointer mt-5">
                 Valeurs
@@ -77,14 +82,30 @@ export default function header() {
               </div>
             </div>
           </div>
-          <a class="mr-5 hover:text-gray-900 cursor-pointer">Nouvelles</a>
-          <a class="mr-5 hover:text-gray-900 cursor-pointer">Contactez nous</a>
+          <Link
+            href="/news"
+            className="mr-5 hover:text-gray-900 cursor-pointer"
+          >
+            Nouvelles
+          </Link>
+          <Link
+            href="/contactus"
+            className="mr-5 hover:text-gray-900 cursor-pointer"
+            class=""
+          >
+            Contactez nous
+          </Link>
         </nav>
         <button
           type="button"
           class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
         >
-          Espace client
+          <Link
+            href="/client"
+            className="/mr-5 hover:text-gray-900 cursor-pointer"
+          >
+            Espace client
+          </Link>
           <svg
             fill="none"
             stroke="currentColor"
