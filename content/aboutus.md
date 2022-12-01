@@ -1,5 +1,5 @@
 ---
 title: Qui nous sommes ?
-thumbnail: img/1-sim800l-sms-relay_schematic.png
+thumbnail: https://dummyimage.com/720x600
 ---
 add your description here
