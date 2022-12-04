@@ -19,12 +19,21 @@ const importBlogPosts = async () => {
   );
 };
 
-const postsList = await importBlogPosts();
-
 export default function readmd() {
+  const [posts, setposts] = useState([]);
+  useEffect(() => {
+    importBlogPosts()
+      .then((res) => {
+        setposts(res);
+      })
+      .catch((err) => {
+        console.log("err");
+      });
+  }, []);
+
   return (
     <div className="blog-list">
-      {postsList.map((post, index) => {
+      {posts.map((post, index) => {
         return (
           <Link key={index} href={`blog/post/${post.slug}`}>
             <a>
