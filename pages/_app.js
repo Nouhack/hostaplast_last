@@ -6,15 +6,15 @@ import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div className="flex  flex-col ">
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
       <Header />
-      <div className="container mx-auto flex flex-col px-5  justify-center items-center ">
+      <div className="container min-h-screen mx-auto flex flex-col px-5 justify-center items-center ">
         <Component {...pageProps} />
       </div>
       <Footer />
       <DownloadApps />
-    </>
+    </div>
   );
 }
 

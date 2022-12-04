@@ -4,7 +4,7 @@ import { attributes, react as HomeContent } from "../content/metadata.md";
 export default function DownloadApps() {
   let { logo, logolabel, theme } = attributes;
   return (
-    <div>
+    <div className="h-20 flex justify-center flex-none">
       <div className="container px-5 py-5 mx-auto flex items-center md:flex-row flex-col">
         <div className="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
           <h2

@@ -7,7 +7,7 @@ export default function index() {
   let { logo, logolabel, theme } = attributes;
   let { news } = news_attributes;
   return (
-    <div className="mt-32 w-full flex flex-col gap-5">
+    <div className="mt-32 w-full grow  flex flex-col gap-5">
       {news.map((item, index) => {
         return (
           <Card key={index}>
