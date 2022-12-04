@@ -29,9 +29,9 @@ export default class Blog extends Component {
     const { postsList } = this.props;
     return (
       <div className="blog-list">
-        {postsList.map((post) => {
+        {postsList.map((post, index) => {
           return (
-            <Link href={`blog/post/${post.slug}`}>
+            <Link key={index} href={`blog/post/${post.slug}`}>
               <a>
                 <img src={post.attributes.thumbnail} />
                 <h2>{post.attributes.title}</h2>
