@@ -31,23 +31,25 @@ export default function index() {
   ];
   return (
     <div>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-wrap -mx-4 -mb-10 text-center">
             {news.map((item, index) => {
               return (
-                <div class="sm:w-1/2 mb-10 px-4" key={index}>
-                  <div class="rounded-lg h-64 overflow-hidden">
+                <div className="sm:w-1/2 mb-10 px-4" key={index}>
+                  <div className="rounded-lg h-64 overflow-hidden">
                     <img
                       alt="content"
                       src="https://dummyimage.com/1201x501"
-                      class="object-cover object-center h-full w-full"
+                      className="object-cover object-center h-full w-full"
                     />
                   </div>
-                  <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
+                  <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
                     {item.title}
                   </h2>
-                  <p class="leading-relaxed text-base">{item.description}</p>
+                  <p className="leading-relaxed text-base">
+                    {item.description}
+                  </p>
                   <button
                     type="button"
                     className="flex mx-auto mt-6 text-white border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"

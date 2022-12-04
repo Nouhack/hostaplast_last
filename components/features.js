@@ -37,15 +37,15 @@ export default function Features() {
   ];
   return (
     <div>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
             Nos fonctionnalités
           </h1>
-          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+          <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             {our_features.map((item, index) => {
               return (
-                <div class="p-4 flex md:w-1/2" key={index}>
+                <div className="p-4 flex md:w-1/2" key={index}>
                   <div
                     className=" w-12 h-12 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-4 flex-shrink-0"
                     style={{
@@ -54,13 +54,15 @@ export default function Features() {
                   >
                     <img className="w-6 w-6" src={item.icon} alt="icon" />
                   </div>
-                  <div class="flex-grow pl-6">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">
+                  <div className="flex-grow pl-6">
+                    <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
                       {item.title}
                     </h2>
-                    <p class="leading-relaxed text-base">{item.description}</p>
+                    <p className="leading-relaxed text-base">
+                      {item.description}
+                    </p>
                     <a
-                      class="mt-3 cursor-pointer inline-flex items-center"
+                      className="mt-3 cursor-pointer inline-flex items-center"
                       style={{
                         color: theme,
                       }}
@@ -73,7 +75,7 @@ export default function Features() {
                         stroke-linejoin="round"
                         stroke-width="2"
                         viewBox="0 0 24 24"
-                        class="w-4 h-4 ml-2"
+                        className="w-4 h-4 ml-2"
                       >
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                       </svg>

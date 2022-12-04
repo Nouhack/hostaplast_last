@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+
+import { Navbar, Button, Dropdown } from "flowbite-react";
 import Link from "next/link";
 import { attributes, react as HomeContent } from "../content/metadata.md";
 
 export default function Header() {
   const [moved, setmoved] = useState(false);
   let { logo, logolabel, theme } = attributes;
+  const router = useRouter();
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -23,22 +27,101 @@ export default function Header() {
   }, []);
   //<nav className={`${moved ? "fixed" : "flex"} text-gray-600 body-font`}></nav>
   return (
+    <Navbar
+      className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+      fluid={true}
+      rounded={true}
+    >
+      <Link href="/">
+        <Navbar.displayName>
+          <img src={logo} className="mr-3 h-10 sm:h-16" alt="Flowbite Logo" />
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+            {logolabel}
+          </span>
+        </Navbar.displayName>
+      </Link>
+      <div className="flex md:order-2">
+        <Button
+          pill
+          style={{
+            backgroundColor: theme,
+          }}
+        >
+          Espace client
+        </Button>
+        <Navbar.Toggle />
+      </div>
+
+      <Navbar.Collapse>
+        <Link href="/">
+          <Navbar.displayName
+            style={{
+              color: router.pathname === "/" && theme,
+            }}
+          >
+            Accueil
+          </Navbar.displayName>
+        </Link>
+
+        <Dropdown label="Notre compagnie" inline={true}>
+          <Dropdown.Item>
+            <Link href="/aboutus">À propos de nous</Link>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Link href="/value">Valeurs</Link>
+          </Dropdown.Item>
+        </Dropdown>
+        <Dropdown label="Advantages" inline={true}>
+          <Dropdown.Item>
+            <Link href="/features">Fonctionnalités</Link>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Link href="/solution">Solution</Link>
+          </Dropdown.Item>
+        </Dropdown>
+
+        <Link href="/news">
+          <Navbar.displayName
+            style={{
+              color: router.pathname === "/news" && theme,
+            }}
+          >
+            Nouvelles
+          </Navbar.displayName>
+        </Link>
+
+        <Link href="/contactus">
+          <Navbar.displayName
+            style={{
+              color: router.pathname === "/contactus" && theme,
+            }}
+          >
+            Contactez Nous
+          </Navbar.displayName>
+        </Link>
+      </Navbar.Collapse>
+    </Navbar>
+  );
+}
+
+/* 
+
     <nav
       className={`${
         moved ? "sticky" : "fixed"
       } top-0 z-50 text-gray-600 body-font bg-white drop-shadow-2xl w-full`}
     >
-      <div class="relative container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <img class={`h-10 text-white  `} src={logo} alt="logo" />
-          <span class="ml-3 text-xl">{logolabel}</span>
+      <div className="relative container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <img className={`h-10 text-white  `} src={logo} alt="logo" />
+          <span className="ml-3 text-xl">{logolabel}</span>
         </a>
-        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <Link href="/" class={`mr-5 hover:text-[${theme}]   cursor-pointer`}>
+        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <Link href="/" className={`mr-5 hover:text-[${theme}]   cursor-pointer`}>
             Accueil
           </Link>
           <div className="group">
-            <a class="mr-5 hover:text-gray-900 cursor-pointer">
+            <a className="mr-5 hover:text-gray-900 cursor-pointer">
               Notre compagnie ↓
             </a>
             <div
@@ -65,7 +148,7 @@ export default function Header() {
           </div>
 
           <div className="group">
-            <a class="mr-5 hover:text-gray-900 cursor-pointer">Avantages ↓</a>
+            <a className="mr-5 hover:text-gray-900 cursor-pointer">Avantages ↓</a>
             <div
               className="hidden z-50 bg-white px-10 py-6  rounded-lg group-hover:block absolute
             "
@@ -98,7 +181,7 @@ export default function Header() {
           <Link
             href="/contactus"
             className="mr-5 hover:text-gray-900 cursor-pointer"
-            class=""
+            className=""
           >
             Contactez nous
           </Link>
@@ -121,12 +204,12 @@ export default function Header() {
             stroke-linejoin="round"
             stroke-width="2"
             viewBox="0 0 24 24"
-            class="w-4 h-4 ml-1"
+            className="w-4 h-4 ml-1"
           >
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
         </button>
       </div>
     </nav>
-  );
-}
+
+*/

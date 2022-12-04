@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "flowbite-react";
 
 export default class NextJsCarousel extends Component {
   render() {
@@ -27,34 +27,14 @@ export default class NextJsCarousel extends Component {
       },
     ];
     return (
-      <div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
-        <Carousel showThumbs={false} emulateTouch={true} autoPlay={true}>
-          {images.map((item, index) => {
-            return (
-              <div key={index} className="w-full">
-                <img
-                  className="h-96 object-cover"
-                  src={item.img}
-                  alt="image1"
-                />
-                <button
-                  className="legend"
-                  style={{
-                    backgroundColor: "rgba(0,0,0,0.5)",
-                    color: "black",
-                    fontSize: "2rem",
-                    borderBottom: "solid",
-                    borderBottomWidth: "2px",
-                    borderBottomColor: "black",
-                    borderRadius: "0px",
-                  }}
-                >
-                  {item.name}
-                </button>
-              </div>
-            );
-          })}
-        </Carousel>
+      <div className="container mx-auto flex flex-col px-5 pt-24 justify-center items-center ">
+        <div className="w-full h-56 sm:h-64 xl:h-80 2xl:h-96">
+          <Carousel>
+            {images.map((item, index) => {
+              return <img src={item.img} alt="..." />;
+            })}
+          </Carousel>
+        </div>
       </div>
     );
   }
