@@ -6,15 +6,24 @@ public_folder: img
 collections:
   - label: "Blog"
     name: "blog"
-    folder: "pages/blog"
+    folder: "content/blogPosts"
     create: true
-    identifier_field: name
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          required: true,
+        }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: true,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: true }
   - name: "news"
     label: "Nouvelle / evenement de hostaplast"
     files:
