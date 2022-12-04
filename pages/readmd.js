@@ -24,9 +24,9 @@ const postsList = await importBlogPosts();
 export default function readmd() {
   return (
     <div className="blog-list">
-      {postsList.map((post) => {
+      {postsList.map((post, index) => {
         return (
-          <Link href={`blog/post/${post.slug}`}>
+          <Link key={index} href={`blog/post/${post.slug}`}>
             <a>
               <img src={post.attributes.thumbnail} />
               <h2>{post.attributes.title}</h2>
