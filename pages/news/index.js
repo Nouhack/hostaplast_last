@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import React from "react";
 import { attributes } from "../../content/metadata.md";
 import { Card, Button } from "flowbite-react";
