@@ -24,7 +24,17 @@ collections:
                 }
               - { label: "Thumbnail", name: "thumbnail", widget: "image" }
               - { label: "Content", name: "content", widget: "markdown" }
-              - slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+              - {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          pattern:
+            [
+              "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "A slug can have no spaces or special characters",
+            ],
+          required: true,
+        }
 
   - name: "generalinfo"
     label: "Information general"
