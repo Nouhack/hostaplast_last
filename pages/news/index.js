@@ -1,70 +1,45 @@
 import React from "react";
 import { attributes, react as HomeContent } from "../../content/metadata.md";
+import { attributes as news_attributes } from "../../content/news.md";
+import { Card, Button } from "flowbite-react";
 
 export default function index() {
   let { logo, logolabel, theme } = attributes;
-  const news = [
-    {
-      id: 1,
-      title: "first event",
-      description: "This is the short description for this event",
-      body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
-    },
-    {
-      id: 2,
-      title: "second event",
-      description: "This is the short description for this event",
-      body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
-    },
-    {
-      id: 3,
-      title: "third event",
-      description: "This is the short description for this event",
-      body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
-    },
-    {
-      id: 4,
-      title: "fourth event",
-      description: "This is the short description for this event",
-      body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
-    },
-  ];
+  let { news } = news_attributes;
   return (
-    <div>
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap -mx-4 -mb-10 text-center">
-            {news.map((item, index) => {
-              return (
-                <div className="sm:w-1/2 mb-10 px-4" key={index}>
-                  <div className="rounded-lg h-64 overflow-hidden">
-                    <img
-                      alt="content"
-                      src="https://dummyimage.com/1201x501"
-                      className="object-cover object-center h-full w-full"
-                    />
-                  </div>
-                  <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
-                    {item.title}
-                  </h2>
-                  <p className="leading-relaxed text-base">
-                    {item.description}
-                  </p>
-                  <button
-                    type="button"
-                    className="flex mx-auto mt-6 text-white border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"
-                    style={{
-                      backgroundColor: theme,
-                    }}
-                  >
-                    Lire...
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+    <div className="mt-32 w-full flex flex-col gap-5">
+      {news.map((item, index) => {
+        return (
+          <Card key={index}>
+            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {item.title}
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400">
+              {item.shortdescription}
+            </p>
+            <Button
+              className="w-1/5"
+              style={{
+                backgroundColor: theme,
+              }}
+            >
+              Read more
+              <svg
+                className="ml-2 -mr-1 h-4 w-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </Button>
+          </Card>
+        );
+      })}
     </div>
   );
 }

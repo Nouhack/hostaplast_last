@@ -4,6 +4,22 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
+  - name: "news"
+    label: "Nouvelle / evenement de hostaplast"
+    files:
+      - label: "Nouvelle / evenement de hostaplast"
+        name: "news"
+        file: "content/news.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Short description",
+              name: "shortdescription",
+              widget: "text",
+            }
+          - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+          - { label: "Content", name: "content", widget: "markdown" }
+
   - name: "generalinfo"
     label: "Information general"
     files:

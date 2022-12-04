@@ -2,6 +2,7 @@ import Head from "next/head";
 import Carousel from "../components/carousel";
 import Details from "../components/detail";
 import Features from "../components/features";
+import LastNews from "../components/last_news";
 import Partners from "../components/partners";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Carousel />
       <Details />
       <Features />
+      <LastNews />
       <Partners />
     </div>
   );

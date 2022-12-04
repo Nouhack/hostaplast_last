@@ -1,45 +1,18 @@
 import React from "react";
 import { Accordion } from "flowbite-react";
+import { HiOutlineArrowCircleDown } from "react-icons/hi";
 import { attributes, react as HomeContent } from "../content/metadata.md";
 import { attributes as features_attributes } from "../content/features.md";
 
 export default function Features() {
   let { logo, logolabel, theme } = attributes;
   let { features } = features_attributes;
-  const our_features = [
-    {
-      id: 1,
-      title: "Temp Reel",
-      description:
-        "positionnement en temps reel de toute votre flotte accessible aussi via smartphone.",
-    },
-
-    {
-      id: 2,
-      title: "État du véhicule",
-      description:
-        "État du véhicule (en fonction, en pause, en veille, hors couverture GPRS)",
-    },
-
-    {
-      id: 3,
-      title: "Indication",
-      description: "Indication de tous les paramètres du véhicule",
-    },
-
-    {
-      id: 4,
-      title: "Live tracking",
-      description:
-        "Live tracking Plus vous permet de générer plusieurs rapports (Relecture (Replaying), excès de vitesse, arrêts, écoconduite, synthèse. Par véhicule(s) et par chauffeur(s) avec l'indicateur RAG)",
-    },
-  ];
   return (
     <div>
       <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
         Nos fonctionnalités
       </h1>
-      <Accordion alwaysOpen={true}>
+      <Accordion arrowIcon={HiOutlineArrowCircleDown} alwaysOpen={true}>
         {features.map((item, index) => {
           return (
             <Accordion.Panel key={index}>
