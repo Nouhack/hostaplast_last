@@ -3,9 +3,5 @@ import { attributes, react as HomeContent } from "../content/value.md";
 
 export default function value() {
   let { body } = attributes;
-  return (
-    <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
-      {body}
-    </div>
-  );
+  return <div className="mt-32">{body}</div>;
 }

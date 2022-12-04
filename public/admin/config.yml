@@ -47,7 +47,13 @@ collections:
         name: "features"
         file: "content/features.md"
         fields:
-          - { label: "Description", name: "description", widget: "markdown" }
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Features"
+            name: "features"
+            widget: list
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
 
       - label: "Detail de la solution"
         name: "solution_detail"

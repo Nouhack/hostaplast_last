@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { HiOutlineArrowRight } from "react-icons/hi";
 
 import { Navbar, Button, Dropdown } from "flowbite-react";
 import Link from "next/link";
@@ -48,6 +49,7 @@ export default function Header() {
           }}
         >
           Espace client
+          <HiOutlineArrowRight className="ml-2 h-5 w-5" />
         </Button>
         <Navbar.Toggle />
       </div>
@@ -71,9 +73,9 @@ export default function Header() {
             <Link href="/value">Valeurs</Link>
           </Dropdown.Item>
         </Dropdown>
-        <Dropdown label="Advantages" inline={true}>
+        <Dropdown label="Pourquoi nous ?" inline={true}>
           <Dropdown.Item>
-            <Link href="/features">Fonctionnalités</Link>
+            <Link href="/advantages">Avantages</Link>
           </Dropdown.Item>
           <Dropdown.Item>
             <Link href="/solution">Solution</Link>

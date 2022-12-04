@@ -1,15 +1,17 @@
 import React from "react";
+import { Accordion } from "flowbite-react";
 import { attributes, react as HomeContent } from "../content/metadata.md";
+import { attributes as features_attributes } from "../content/features.md";
 
 export default function Features() {
   let { logo, logolabel, theme } = attributes;
+  let { features } = features_attributes;
   const our_features = [
     {
       id: 1,
       title: "Temp Reel",
       description:
         "positionnement en temps reel de toute votre flotte accessible aussi via smartphone.",
-      icon: "",
     },
 
     {
@@ -17,14 +19,12 @@ export default function Features() {
       title: "État du véhicule",
       description:
         "État du véhicule (en fonction, en pause, en veille, hors couverture GPRS)",
-      icon: "",
     },
 
     {
       id: 3,
       title: "Indication",
       description: "Indication de tous les paramètres du véhicule",
-      icon: "",
     },
 
     {
@@ -32,11 +32,46 @@ export default function Features() {
       title: "Live tracking",
       description:
         "Live tracking Plus vous permet de générer plusieurs rapports (Relecture (Replaying), excès de vitesse, arrêts, écoconduite, synthèse. Par véhicule(s) et par chauffeur(s) avec l'indicateur RAG)",
-      icon: "",
     },
   ];
   return (
     <div>
+      <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
+        Nos fonctionnalités
+      </h1>
+      <Accordion alwaysOpen={true}>
+        {features.map((item, index) => {
+          return (
+            <Accordion.Panel>
+              <Accordion.Title>Temp Reel</Accordion.Title>
+              <Accordion.Content>
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
+                  Flowbite is an open-source library of interactive components
+                  built on top of Tailwind CSS including buttons, dropdowns,
+                  modals, navbars, and more.
+                </p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Check out this guide to learn how to{" "}
+                  <a
+                    href="https://flowbite.com/docs/getting-started/introduction/"
+                    className="text-blue-600 hover:underline dark:text-blue-500"
+                  >
+                    get started
+                  </a>{" "}
+                  and start developing websites even faster with components on
+                  top of Tailwind CSS.
+                </p>
+              </Accordion.Content>
+            </Accordion.Panel>
+          );
+        })}
+      </Accordion>
+    </div>
+  );
+}
+
+/* 
+
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
@@ -47,7 +82,7 @@ export default function Features() {
               return (
                 <div className="p-4 flex md:w-1/2" key={index}>
                   <div
-                    className=" w-12 h-12 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-4 flex-shrink-0"
+                    className=" w-5 h-5 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-4 flex-shrink-0"
                     style={{
                       backgroundColor: theme,
                     }}
@@ -87,6 +122,5 @@ export default function Features() {
           </div>
         </div>
       </section>
-    </div>
-  );
-}
+
+*/
