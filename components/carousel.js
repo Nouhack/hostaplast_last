@@ -31,7 +31,7 @@ export default class NextJsCarousel extends Component {
         <div className="w-full h-56 sm:h-64 xl:h-80 2xl:h-96">
           <Carousel>
             {images.map((item, index) => {
-              return <img src={item.img} alt="..." />;
+              return <img key={index} src={item.img} alt="..." />;
             })}
           </Carousel>
         </div>
