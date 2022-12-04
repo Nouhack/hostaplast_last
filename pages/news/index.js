@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { attributes } from "../../content/metadata.md";
 import { Card, Button } from "flowbite-react";
 import Link from "next/link";
@@ -6,8 +6,6 @@ import Link from "next/link";
 const BLOG_POSTS_PATH = "../content/news";
 
 const importBlogPosts = async () => {
-  // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
-  // second flag in require.context function is if subdirectories should be searched
   const markdownFiles = require
     .context(BLOG_POSTS_PATH, false, /\.md$/)
     .keys()
