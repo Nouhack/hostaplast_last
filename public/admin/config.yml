@@ -12,13 +12,18 @@ collections:
         file: "content/news.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Short description",
-              name: "shortdescription",
-              widget: "text",
-            }
-          - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-          - { label: "Content", name: "content", widget: "markdown" }
+          - label: "news"
+            name: "news"
+            widget: list
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Short description",
+                  name: "shortdescription",
+                  widget: "text",
+                }
+              - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+              - { label: "Content", name: "content", widget: "markdown" }
 
   - name: "generalinfo"
     label: "Information general"
