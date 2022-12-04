@@ -9,7 +9,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
       <Header />
-      <Component {...pageProps} />
+      <div className="container mx-auto flex flex-col px-5  justify-center items-center ">
+        <Component {...pageProps} />
+      </div>
       <Footer />
       <DownloadApps />
     </>

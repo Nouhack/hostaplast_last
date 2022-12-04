@@ -6,12 +6,6 @@ export default function aboutus() {
 
   return (
     <div>
-      <footer className="text-gray-600 body-font">
-        <div className="bg-gray-100"></div>
-      </footer>
-      <footer className="text-gray-600 body-font"></footer>
-      <footer className="text-gray-600 body-font"></footer>
-      <section className="text-gray-600 body-font"></section>
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
           <img

@@ -33,7 +33,7 @@ export default function Header() {
       rounded={true}
     >
       <Link href="/">
-        <Navbar.displayName>
+        <Navbar.displayName className="flex flex-row">
           <img src={logo} className="mr-3 h-10 sm:h-16" alt="Flowbite Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             {logolabel}

@@ -53,4 +53,4 @@ collections:
         name: "solution_detail"
         file: "content/solution_details.md"
         fields:
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Description", name: "description", widget: "markdown" }
