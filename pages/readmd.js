@@ -1,4 +1,4 @@
-import React, { Component, udeEffect, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 
 import Link from "next/link";
 
