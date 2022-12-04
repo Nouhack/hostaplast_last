@@ -5,15 +5,15 @@ media_folder: public/img
 public_folder: img
 collections:
   - label: "Blog"
-  name: "blog"
-  folder: "_posts/blog"
-  create: true
-  identifier_field: name
-  fields:
-    - {label: "Name", name: "name", widget: "string"}
-    - {label: "Publish Date", name: "date", widget: "datetime"}
-    - {label: "Featured Image", name: "thumbnail", widget: "image"}
-    - {label: "Body", name: "body", widget: "markdown"}
+    name: "blog"
+    folder: "_posts/blog"
+    create: true
+    identifier_field: name
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "news"
     label: "Nouvelle / evenement de hostaplast"
@@ -35,7 +35,17 @@ collections:
                 }
               - { label: "Thumbnail", name: "thumbnail", widget: "image" }
               - { label: "Content", name: "content", widget: "markdown" }
-              - {label: "Slug", name: "slug",widget: "string", pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$","A slug can have no spaces or special characters",], required: true,}
+              - {
+                  label: "Slug",
+                  name: "slug",
+                  widget: "string",
+                  pattern:
+                    [
+                      "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                      "A slug can have no spaces or special characters",
+                    ],
+                  required: true,
+                }
 
   - name: "generalinfo"
     label: "Information general"
