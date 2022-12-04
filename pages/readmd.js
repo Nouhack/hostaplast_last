@@ -19,7 +19,7 @@ const importBlogPosts = async () => {
   );
 };
 
-export default function readmd() {
+export default function Readmd() {
   const [posts, setposts] = useState([]);
   useEffect(() => {
     importBlogPosts()
