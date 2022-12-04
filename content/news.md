@@ -10,4 +10,10 @@ news:
       2. t﻿his is the detail
       3. o﻿f this event
       4. a﻿ll of that is a test
+    slug: fghgfhg
+  - title: second event
+    shortdescription: this is the shor description for the second event
+    thumbnail: img/arduino.png
+    content: l﻿ksdjflskdjflsdkj sdlfjksldkfjghjghjghjghj
+    slug: testtest
 ---
