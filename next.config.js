@@ -1,4 +1,4 @@
-const blogPostsFolder = "./content/blogPosts";
+const blogPostsFolder = "./content/news";
 const getPathsForPosts = () => {
   return fs
     .readdirSync(blogPostsFolder)
