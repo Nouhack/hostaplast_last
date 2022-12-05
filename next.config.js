@@ -1,5 +1,5 @@
 const fs = require("fs");
-const blogPostsFolder = `./content/blogPosts`;
+const blogPostsFolder = `${__dirname}/content/blogPosts`;
 
 const getPathsForPosts = () => {
   return fs
