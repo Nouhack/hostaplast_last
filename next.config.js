@@ -1,27 +1,6 @@
 const fs = require("fs");
 var path = require("path");
 
-const postsDir = path.join(process.cwd(), "content", "blogPosts");
-
-const getPathsForPosts = () => {
-  return fs
-    .readdirSync(postsDir)
-    .map((blogName) => {
-      const trimmedName = blogName.substring(0, blogName.length - 3);
-      return {
-        [`/blog/post/${trimmedName}`]: {
-          page: "/blog/post/[slug]",
-          query: {
-            slug: trimmedName,
-          },
-        },
-      };
-    })
-    .reduce((acc, curr) => {
-      return { ...acc, ...curr };
-    }, {});
-};
-
 module.exports = {
   images: {
     unoptimized: true,
@@ -32,11 +11,5 @@ module.exports = {
       use: "frontmatter-markdown-loader",
     });
     return configuration;
-  },
-  async exportPathMap(defaultPathMap) {
-    return {
-      ...defaultPathMap,
-      ...getPathsForPosts(),
-    };
   },
 };
