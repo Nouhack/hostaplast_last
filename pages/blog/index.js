@@ -48,6 +48,7 @@ import { promises as fs } from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import Head from "next/head";
+import { path } from "path";
 
 export default function Home({ blogs }) {
   return (
