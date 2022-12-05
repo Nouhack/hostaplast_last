@@ -30,7 +30,6 @@ module.exports = {
   experimental: {
     nftTracing: true,
   },
-  target: "serverless",
 
   webpack: (configuration) => {
     configuration.module.rules.push({
