@@ -1,8 +1,9 @@
 import React from "react";
 import { attributes, react as HomeContent } from "../content/aboutus.md";
+import MarkdownWrapper from "../components/markdownWrapper";
 
 export default function aboutus() {
-  let { title, thumbnail, body } = attributes;
+  let { title, thumbnail, content } = attributes;
 
   return (
     <div>
@@ -17,7 +18,9 @@ export default function aboutus() {
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
               {title}
             </h1>
-            <p className="mb-8 leading-relaxed">{body}</p>
+            <div className="mb-8 leading-relaxed">
+              <MarkdownWrapper>{content}</MarkdownWrapper>
+            </div>
             <form method="get" id="ip4w4"></form>
             <div className="flex"></div>
           </div>

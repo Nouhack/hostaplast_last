@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
+import MarkdownWrapper from "../../../components/markdownWrapper";
 import { useRouter } from "next/router";
 import { attributes, react as HomeContent } from "../../../content/news.md";
-import ReactMarkdown from "react-markdown";
 
 const Post = () => {
   const [value, setvalue] = useState("");
   useEffect(() => {
-    setvalue(news.filter((item) => item.slug == slug)[0].content);
+    try {
+      setvalue(news.filter((item) => item.slug == slug)[0].content);
+    } catch (error) {
+      console.log("none");
+    }
   }, []);
-
   let { news } = attributes;
-
   const router = useRouter();
   const { slug } = router.query;
 
-  return <ReactMarkdown>{value}</ReactMarkdown>;
+  return <MarkdownWrapper>{value}</MarkdownWrapper>;
 };
 
 export default Post;

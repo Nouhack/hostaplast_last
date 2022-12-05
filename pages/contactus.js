@@ -1,6 +1,8 @@
 import React from "react";
+import { attributes, react as HomeContent } from "../content/metadata.md";
 
 export default function contactus() {
+  let { theme } = attributes;
   return (
     <section className="w-screen text-gray-600 body-font relative ">
       <div className="absolute inset-0 bg-gray-300">
@@ -51,7 +53,10 @@ export default function contactus() {
             </div>
             <button
               type="submit"
-              className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              className="text-white  border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              style={{
+                backgroundColor: theme,
+              }}
             >
               Envoyer
             </button>

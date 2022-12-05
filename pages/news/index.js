@@ -9,7 +9,7 @@ export default function Nouh() {
   let { theme } = meta_attributes;
 
   return (
-    <div>
+    <div className="gap-5 flex flex-col ">
       {news.map((item, index) => {
         return (
           <Card key={index}>
