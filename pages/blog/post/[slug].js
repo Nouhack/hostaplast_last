@@ -9,7 +9,10 @@ const Post = () => {
   const router = useRouter();
   const { slug } = router.query;
   const specefied_data = news.filter((item) => item.slug == slug);
-  const txt = specefied_data[0].content;
+  const txt =
+    typeof specefied_data[0].content !== undefined
+      ? specefied_data[0].content
+      : "";
 
   return <ReactMarkdown>{txt}</ReactMarkdown>;
 };
