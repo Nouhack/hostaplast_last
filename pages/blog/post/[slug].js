@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { attributes, react as HomeContent } from "../../content/news.md";
+import { attributes, react as HomeContent } from "../../../content/news.md";
 
 const Post = () => {
   let { news } = attributes;
