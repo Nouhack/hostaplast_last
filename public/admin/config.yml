@@ -4,19 +4,13 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - label: "News"
-    name: "news"
-    folder: "content/news"
+  - label: "Blog"
+    name: "blog"
+    folder: "content/blogPosts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "Short Description",
-          name: "shortdescription",
-          widget: "text",
-          required: true,
-        }
       - {
           label: "Publish Date",
           name: "date",
@@ -30,6 +24,7 @@ collections:
           required: true,
         }
       - { label: "Body", name: "body", widget: "markdown", required: true }
+
   - name: "news"
     label: "Nouvelle / evenement de hostaplast"
     files:
