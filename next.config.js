@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 //const blogPostsFolder = "./content/blogPosts";
 const blogPostsFolder = path.join(process.cwd(), "content/blogPosts");
 
