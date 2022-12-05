@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { attributes } from "../../content/metadata.md";
 import { Card, Button } from "flowbite-react";
 
-const BLOG_POSTS_PATH = "../../content/news";
+const BLOG_POSTS_PATH = "../../content/blogPosts";
 
 const importBlogPosts = async () => {
   const markdownFiles = require
