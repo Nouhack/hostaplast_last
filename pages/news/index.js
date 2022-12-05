@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "flowbite-react";
 import { attributes, react as HomeContent } from "../../content/news.md";
-import { meta_attributes } from "../../content/metadata.md";
+import { attributes as meta_attributes } from "../../content/metadata.md";
 
 export default function Nouh() {
   let { title, news } = attributes;
