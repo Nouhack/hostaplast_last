@@ -5,7 +5,9 @@ const path = require("path");
 
 const getPathsForPosts = () => {
   //const postsDirectory = path.join(process.cwd(), "content/blogPosts");
-  const postsDirectory = path.resolve(__dirname, "./content/blogPosts");
+  //const postsDirectory = path.resolve(__dirname, "./content/blogPosts");
+  const postsDirectory =
+    "/opt/build/repo/node_modules/next/dist/export/content/blogPosts";
 
   return fs
     .readdirSync(postsDirectory)
