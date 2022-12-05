@@ -1,5 +1,4 @@
 const blogPostsFolder = "./content/news";
-const fs = require("fs");
 
 const getPathsForPosts = () => {
   return fs
@@ -24,17 +23,12 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  webpack: (configuration) => {
-    configuration.module.rules.push({
+  webpack: (cfg) => {
+    cfg.module.rules.push({
       test: /\.md$/,
-      use: "frontmatter-markdown-loader",
+      loader: "frontmatter-markdown-loader",
+      options: { mode: ["react-component"] },
     });
-    return configuration;
-  },
-  async exportPathMap(defaultPathMap) {
-    return {
-      ...defaultPathMap,
-      ...getPathsForPosts(),
-    };
+    return cfg;
   },
 };
