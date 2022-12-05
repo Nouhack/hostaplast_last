@@ -5,11 +5,31 @@ news:
     shortdescription: the shord description will be shown in the homepage and after
       the user clicks on this event he'll be redirected to the event detail page
     thumbnail: img/arduino.png
-    content: |-
-      1. h﻿ow are you
-      2. t﻿his is the detail
-      3. o﻿f this event
-      4. a﻿ll of that is a test
+    content: "### Features\r
+
+      \r
+
+      - Support Standard Markdown / CommonMark and GFM(GitHub Flavored
+      Markdown);\r
+
+      - Full-featured: Real-time Preview, Image (cross-domain) upload,
+      Preformatted text/Code blocks/Tables insert, Code fold, Search replace,
+      Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax
+      highlighting...;\r
+
+      - Markdown Extras : Support ToC (Table of Contents), Emoji, Task
+      lists, @Links...;\r
+
+      - Compatible with all major browsers (IE8+), compatible Zepto.js and
+      iPad;\r
+
+      - Support identification, interpretation, fliter of the HTML tags;\r
+
+      - Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and
+      Sequence Diagram of Markdown extended syntax;\r
+
+      - Support AMD/CMD (Require.js & Sea.js) Module Loader, and
+      Custom/define editor plugins;"
     slug: fghgfhg
   - title: second event
     shortdescription: this is the shor description for the second event
