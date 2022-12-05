@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { path } from "path";
 
 const postsPath = path.join(__dirname, "../../..", "content/blogPosts");
 
