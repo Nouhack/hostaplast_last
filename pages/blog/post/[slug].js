@@ -7,7 +7,7 @@ const Post = () => {
 
   const router = useRouter();
   const { slug } = router.query;
-  const specefied_data = news.filter(item.slug === slug);
+  const specefied_data = news.filter((item) => item.slug === slug);
 
   return <div>{specefied_data.content}</div>;
 };
