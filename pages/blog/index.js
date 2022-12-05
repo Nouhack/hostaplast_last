@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Link from "next/link";
 
-const BLOG_POSTS_PATH = "../../content/blogPosts";
+const BLOG_POSTS_PATH = "../../content/blogPosts/";
 
 const importBlogPosts = async () => {
   // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
@@ -13,7 +13,7 @@ const importBlogPosts = async () => {
     .map((relativePath) => relativePath.substring(2));
   return Promise.all(
     markdownFiles.map(async (path) => {
-      const markdown = await import(`${BLOG_POSTS_PATH}/${path}`);
+      const markdown = await import(`${BLOG_POSTS_PATH}${path}`);
       return { ...markdown, slug: path.substring(0, path.length - 3) };
     })
   );
