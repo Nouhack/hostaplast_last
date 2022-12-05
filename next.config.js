@@ -1,4 +1,5 @@
 const blogPostsFolder = "./content/news";
+
 const getPathsForPosts = () => {
   return fs
     .readdirSync(blogPostsFolder)
@@ -22,12 +23,17 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  webpack: (cfg) => {
-    cfg.module.rules.push({
+  webpack: (configuration) => {
+    configuration.module.rules.push({
       test: /\.md$/,
-      loader: "frontmatter-markdown-loader",
-      options: { mode: ["react-component"] },
+      use: "frontmatter-markdown-loader",
     });
-    return cfg;
+    return configuration;
+  },
+  async exportPathMap(defaultPathMap) {
+    return {
+      ...defaultPathMap,
+      ...getPathsForPosts(),
+    };
   },
 };
