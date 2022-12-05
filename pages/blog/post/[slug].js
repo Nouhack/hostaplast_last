@@ -3,7 +3,8 @@ import { path } from "path";
 
 class Post extends Component {
   static async getInitialProps({ query }) {
-    const postsPath = path.join(__dirname, "../../..", "content/blogPosts");
+    //const postsPath = path.join(__dirname, "../../..", "content/blogPosts");
+    const postsPath = path.join(process.cwd(), "../../../content/blogPosts");
     const { slug } = query;
     const blogpost = await import(`${postsPath}/${slug}.md`).catch(
       (error) => null
