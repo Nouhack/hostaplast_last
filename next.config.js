@@ -1,16 +1,9 @@
 const fs = require("fs");
-const path = require("path");
-//const blogPostsFolder = "./content/blogPosts";
-//const postsPath = path.join(__dirname, ".", "content/blogPosts");
+const blogPostsFolder = "./content/blogPosts";
 
 const getPathsForPosts = () => {
-  //const postsDirectory = path.join(process.cwd(), "content/blogPosts");
-  //const postsDirectory = path.resolve(__dirname, "./content/blogPosts");
-  const postsDirectory =
-    "/opt/build/repo/node_modules/next/dist/export/content/blogPosts";
-
   return fs
-    .readdirSync(postsDirectory)
+    .readdirSync(blogPostsFolder)
     .map((blogName) => {
       const trimmedName = blogName.substring(0, blogName.length - 3);
       return {
