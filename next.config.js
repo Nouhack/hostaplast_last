@@ -26,10 +26,6 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    nftTracing: true,
-  },
-
   webpack: (configuration) => {
     configuration.module.rules.push({
       test: /\.md$/,
