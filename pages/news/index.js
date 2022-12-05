@@ -19,7 +19,7 @@ export default function Nouh() {
             <p className="font-normal text-gray-700 dark:text-gray-400">
               {item.shortdescription}
             </p>
-            <Link href={`${item.slug}`}>
+            <Link href={`blog/post/${item.slug}`}>
               <Button
                 className="w-1/5"
                 style={{
