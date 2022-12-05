@@ -1,10 +1,12 @@
 const fs = require("fs");
+var path = require("path");
+
 //const blogPostsFolder = "./content/blogPosts";
-//const blogPostsFolder = path.join(__dirname, "./contant/blogPosts");
+const blogPostsFolder = path.join(__dirname, "contant/blogPosts");
 
 const getPathsForPosts = () => {
   return fs
-    .readdir(`${__dirname}/content/blogPosts`, { withFileTypes: true })
+    .readdirSync(blogPostsFolder)
     .map((blogName) => {
       const trimmedName = blogName.substring(0, blogName.length - 3);
       return {
