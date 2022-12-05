@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, Dropdown } from "flowbite-react";
+import { Card, Button } from "flowbite-react";
 import { attributes, react as HomeContent } from "../../content/news.md";
 
 export default function Nouh() {
