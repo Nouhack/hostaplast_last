@@ -1,3 +1,4 @@
+const fs = require("fs");
 const blogPostsFolder = "./content/news";
 
 const getPathsForPosts = () => {
@@ -6,8 +7,8 @@ const getPathsForPosts = () => {
     .map((blogName) => {
       const trimmedName = blogName.substring(0, blogName.length - 3);
       return {
-        [`/news/post/${trimmedName}`]: {
-          page: "/news/post/[slug]",
+        [`/blog/post/${trimmedName}`]: {
+          page: "/blog/post/[slug]",
           query: {
             slug: trimmedName,
           },
@@ -23,12 +24,17 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  webpack: (cfg) => {
-    cfg.module.rules.push({
+  webpack: (configuration) => {
+    configuration.module.rules.push({
       test: /\.md$/,
-      loader: "frontmatter-markdown-loader",
-      options: { mode: ["react-component"] },
+      use: "frontmatter-markdown-loader",
     });
-    return cfg;
+    return configuration;
+  },
+  async exportPathMap(defaultPathMap) {
+    return {
+      ...defaultPathMap,
+      ...getPathsForPosts(),
+    };
   },
 };

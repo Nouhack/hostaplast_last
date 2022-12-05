@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { attributes } from "../../content/metadata.md";
 import { Card, Button } from "flowbite-react";
-import Link from "next/link";
 
 const BLOG_POSTS_PATH = "../../content/news";
 
