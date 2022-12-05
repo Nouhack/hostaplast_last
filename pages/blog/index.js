@@ -1,3 +1,5 @@
+/* 
+
 import React, { Component } from "react";
 
 import Link from "next/link";
@@ -40,4 +42,12 @@ export default class Blog extends Component {
       </div>
     );
   }
+}
+
+*/
+
+import React from "react";
+
+export default function Lala() {
+  return <div>Lala</div>;
 }
