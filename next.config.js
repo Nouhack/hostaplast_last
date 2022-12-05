@@ -23,7 +23,7 @@ const getPathsForPosts = () => {
 };
 
 module.exports = {
-  output: "standalone",
+  distDir: "out",
 
   images: {
     unoptimized: true,
