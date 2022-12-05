@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 
+const postsPath = path.join(__dirname, "../../..", "content/blogPosts");
+
 class Post extends Component {
   static async getInitialProps({ query }) {
     const { slug } = query;
-    const blogpost = await import(
-      `../../../content/blogPosts/${slug}.md`
-    ).catch((error) => null);
+    const blogpost = await import(`${postsPath}/${slug}.md`).catch(
+      (error) => null
+    );
 
     return { blogpost };
   }
