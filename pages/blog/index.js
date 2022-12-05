@@ -75,8 +75,8 @@ export default function Home({ blogs }) {
 
 export async function getStaticProps() {
   // List of files in blgos folder
-  const postsPath = path.join(__dirname, "../..", "content/blogPosts");
-  const filesInBlogs = fs.readdirSync(postsPath);
+  //const postsPath = path.join(__dirname, "../..", "content/blogPosts");
+  const filesInBlogs = fs.readdirSync("../../content/blogPosts");
 
   // Get the front matter and slug (the filename without .md) of all files
   const blogs = filesInBlogs.map((filename) => {
