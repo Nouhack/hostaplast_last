@@ -23,6 +23,7 @@ const getPathsForPosts = () => {
 };
 
 module.exports = {
+  target: "serverless",
   images: {
     unoptimized: true,
   },
