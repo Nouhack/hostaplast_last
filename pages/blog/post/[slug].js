@@ -1,35 +1,11 @@
-import React, { Component } from "react";
-import { path } from "path";
+import React from "react";
+import { useRouter } from "next/router";
 
-class Post extends Component {
-  static async getInitialProps({ query }) {
-    //const postsPath = path.join(__dirname, "../../..", "content/blogPosts");
-    const postsPath = path.join(process.cwd(), "../../../content/blogPosts");
-    const { slug } = query;
-    const blogpost = await import(`${postsPath}/${slug}.md`).catch(
-      (error) => null
-    );
+const Post = () => {
+  const router = useRouter();
+  const { slug } = router.query;
 
-    return { blogpost };
-  }
-  render() {
-    if (!this.props.blogpost) return <div>not found</div>;
-
-    const {
-      html,
-      attributes: { thumbnail, title },
-    } = this.props.blogpost.default;
-
-    return (
-      <>
-        <article>
-          <h1>{title}</h1>
-          <img src={thumbnail} />
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </article>
-      </>
-    );
-  }
-}
+  return <div>{slug}</div>;
+};
 
 export default Post;
