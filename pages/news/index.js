@@ -21,7 +21,6 @@ const importBlogPosts = async () => {
 export default class News extends Component {
   static async getInitialProps() {
     const postsList = await importBlogPosts();
-
     return { postsList };
   }
   render() {
