@@ -1,3 +1,6 @@
+/* 
+
+
 import React, { Component } from "react";
 import { attributes } from "../../content/metadata.md";
 import { Card, Button } from "flowbite-react";
@@ -63,4 +66,12 @@ export default class News extends Component {
       </div>
     );
   }
+}
+
+*/
+
+import React from "react";
+
+export default function Nouh() {
+  return <div>Nouh</div>;
 }
