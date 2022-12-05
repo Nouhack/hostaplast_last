@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 //const blogPostsFolder = "./content/blogPosts";
 //const postsPath = path.join(__dirname, ".", "content/blogPosts");
-const postsDirectory = path.join(process.cwd(), "content/blogPosts");
 
 const getPathsForPosts = () => {
+  const postsDirectory = path.join(process.cwd(), "content/blogPosts");
   return fs
     .readdirSync(postsDirectory)
     .map((blogName) => {
