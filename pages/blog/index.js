@@ -31,7 +31,7 @@ export default class Blog extends Component {
       <div className="blog-list">
         {postsList.map((post) => {
           return (
-            <Link href={`blog/post/${post.slug}`}>
+            <Link key={index} href={`blog/post/${post.slug}`}>
               <a>
                 <img src={post.attributes.thumbnail} />
                 <h2>{post.attributes.title}</h2>
