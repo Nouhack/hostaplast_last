@@ -1,4 +1,5 @@
 const blogPostsFolder = "./content/news";
+const fs = require("fs");
 
 const getPathsForPosts = () => {
   return fs
