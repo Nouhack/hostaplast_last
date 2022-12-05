@@ -1,16 +1,11 @@
 const fs = require("fs");
 var path = require("path");
-import getConfig from "next/config";
 
-const { serverRuntimeConfig } = getConfig();
-
-//const blogPostsFolder = "./content/blogPosts";
-//const blogPostsFolder = path.join(process.cwd(), ".next/content/blogPosts");
-const dir = path.join(serverRuntimeConfig.PROJECT_ROOT, "./content/blogPosts");
+const blogPostsFolder = "./content/blogPosts";
 
 const getPathsForPosts = () => {
   return fs
-    .readdirSync(dir)
+    .readdirSync(blogPostsFolder)
     .map((blogName) => {
       const trimmedName = blogName.substring(0, blogName.length - 3);
       return {
