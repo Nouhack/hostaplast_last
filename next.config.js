@@ -1,6 +1,6 @@
 const fs = require("fs");
 const blogPostsFolder = "./content/blogPosts";
-
+/*
 const getPathsForPosts = () => {
   return fs
     .readdirSync(blogPostsFolder)
@@ -19,7 +19,7 @@ const getPathsForPosts = () => {
       return { ...acc, ...curr };
     }, {});
 };
-
+*/
 module.exports = {
   images: {
     unoptimized: true,
@@ -31,10 +31,14 @@ module.exports = {
     });
     return configuration;
   },
+  /* 
+  
   async exportPathMap(defaultPathMap) {
     return {
       ...defaultPathMap,
       ...getPathsForPosts(),
     };
   },
+  
+  */
 };
