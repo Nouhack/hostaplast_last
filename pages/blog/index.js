@@ -44,7 +44,7 @@ export default class Blog extends Component {
 }
 
 */
-import fs from "fs";
+import { promises as fs } from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import Head from "next/head";
@@ -74,7 +74,8 @@ export default function Home({ blogs }) {
 
 export async function getStaticProps() {
   // List of files in blgos folder
-  const filesInBlogs = fs.readdirSync("../../content/blogPosts");
+  const postsPath = path.join(__dirname, "../..", "content/blogPosts");
+  const filesInBlogs = fs.readdirSync(postsPath);
 
   // Get the front matter and slug (the filename without .md) of all files
   const blogs = filesInBlogs.map((filename) => {
