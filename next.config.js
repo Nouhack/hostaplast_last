@@ -5,7 +5,7 @@ const blogPostsFolder = path.join(process.cwd(), "content/blogPosts");
 
 const getPathsForPosts = () => {
   return fs
-    .readdirSync(blogPostsFolder)
+    .readdirSync(blogPostsFolder, { recursive: true })
     .map((blogName) => {
       const trimmedName = blogName.substring(0, blogName.length - 3);
       return {
