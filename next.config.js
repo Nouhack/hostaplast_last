@@ -4,7 +4,9 @@ const path = require("path");
 //const postsPath = path.join(__dirname, ".", "content/blogPosts");
 
 const getPathsForPosts = () => {
-  const postsDirectory = path.join(process.cwd(), "content/blogPosts");
+  //const postsDirectory = path.join(process.cwd(), "content/blogPosts");
+  const postsDirectory = path.resolve(__dirname, "./content/blogPosts");
+
   return fs
     .readdirSync(postsDirectory)
     .map((blogName) => {
