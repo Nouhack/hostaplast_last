@@ -2,7 +2,7 @@ const fs = require("fs");
 var path = require("path");
 
 //const blogPostsFolder = "./content/blogPosts";
-const blogPostsFolder = path.join(process.cwd(), "content/blogPosts");
+const blogPostsFolder = path.join(process.cwd(), ".next/content/blogPosts");
 
 const getPathsForPosts = () => {
   return fs
