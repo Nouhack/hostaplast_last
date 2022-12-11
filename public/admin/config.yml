@@ -19,6 +19,8 @@ collections:
           time_format: "HH:mm",
           format: "LLL",
         }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Short description", name: "shortdescription", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "news"

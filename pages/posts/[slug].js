@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export default function Blog({ frontmatter, markdown }) {
   return (
-    <div>
+    <div className="prose mt-32">
       <Head>
         <title>Demo Blog | {frontmatter.title}</title>
       </Head>

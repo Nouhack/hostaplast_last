@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import {
   attributes,
   react as HomeContent,
@@ -6,5 +7,9 @@ import {
 
 export default function solution() {
   let { description } = attributes;
-  return <div className="mt-32">{description}</div>;
+  return (
+    <div className="prose mt-32">
+      <ReactMarkdown>{description}</ReactMarkdown>
+    </div>
+  );
 }

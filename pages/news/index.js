@@ -1,16 +1,19 @@
-import React from "react";
+import fs from "fs";
+import matter from "gray-matter";
 import Link from "next/link";
+import Head from "next/head";
+import React from "react";
 import { Card, Button } from "flowbite-react";
 import { attributes, react as HomeContent } from "../../content/news.md";
 import { attributes as meta_attributes } from "../../content/metadata.md";
 
-export default function Nouh() {
+export default function Nouh({ blogs }) {
   let { title, news } = attributes;
   let { theme } = meta_attributes;
 
   return (
-    <div className="gap-5 flex flex-col ">
-      {news.map((item, index) => {
+    <div className="gap-5 flex flex-col w-full">
+      {blogs.map((item, index) => {
         return (
           <Card key={index}>
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -19,7 +22,8 @@ export default function Nouh() {
             <p className="font-normal text-gray-700 dark:text-gray-400">
               {item.shortdescription}
             </p>
-            <Link href={`blog/post/${item.slug}`}>
+
+            <Link href={`/posts/${item.slug}`}>
               <Button
                 className="w-1/5"
                 style={{
@@ -46,4 +50,26 @@ export default function Nouh() {
       })}
     </div>
   );
+}
+
+export async function getStaticProps() {
+  // List of files in blgos folder
+  const filesInBlogs = fs.readdirSync("./content/posts");
+
+  // Get the front matter and slug (the filename without .md) of all files
+  const blogs = filesInBlogs.map((filename) => {
+    const file = fs.readFileSync(`./content/posts/${filename}`, "utf8");
+    const matterData = matter(file);
+
+    return {
+      ...matterData.data, // matterData.data contains front matter
+      slug: filename.slice(0, filename.indexOf(".")),
+    };
+  });
+
+  return {
+    props: {
+      blogs,
+    },
+  };
 }

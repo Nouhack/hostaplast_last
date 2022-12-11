@@ -2,27 +2,19 @@
 title: second one
 date: December 11, 2022 10:08 AM
 ---
-- - -
 
-**Advertisement :)**
+# A demo of `react-markdown`
 
-* **[pica](https://nodeca.github.io/pica/demo/)** - high quality and fast image
-  resize in browser.
-* **[babelfish](https://github.com/nodeca/babelfish/)** - developer friendly
-  i18n with plurals support and easy syntax.
+`react-markdown` is a markdown component for React.
 
-You will like those projects!
+👉 Changes are re-rendered as you type.
 
-- - -
+👈 Try writing some markdown on the left.
 
-# h1 Heading 8-)
+## Overview
 
-## h2 Heading
-
-### h3 Heading
-
-#### h4 Heading
-
-##### h5 Heading
-
-###### h6 Heading
+- Follows [CommonMark](https://commonmark.org)
+- Optionally follows [GitHub Flavored Markdown](https://github.github.com/gfm/)
+- Renders actual React elements instead of using `dangerouslySetInnerHTML`
+- Lets you define your own components (to render `MyHeading` instead of `h1`)
+- Has a lot of plugins
