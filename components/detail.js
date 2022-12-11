@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { attributes } from "../content/metadata.md";
 import { attributes as solution_attributes } from "../content/solution.md";
 
@@ -22,15 +23,17 @@ export default function Detail() {
             </h1>
             <p className="mb-8 leading-relaxed">{description}</p>
             <div className="flex justify-center">
-              <button
-                type="button"
-                className={`inline-flex text-white border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg`}
-                style={{
-                  backgroundColor: theme,
-                }}
-              >
-                Détails
-              </button>
+              <Link href="/solution">
+                <button
+                  type="button"
+                  className={`inline-flex text-white border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg`}
+                  style={{
+                    backgroundColor: theme,
+                  }}
+                >
+                  Détails
+                </button>
+              </Link>
             </div>
           </div>
         </div>
