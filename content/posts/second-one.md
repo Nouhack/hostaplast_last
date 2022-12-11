@@ -1,8 +1,8 @@
 ---
 title: second one
 date: December 11, 2022 10:08 AM
-thumbnail: img/arduino.png
-shortdescription: >+
+thumbnail: https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+shortdescription: >
   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
   when an unknown printer took a galley of type and scrambled it to make a type
