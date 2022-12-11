@@ -13,7 +13,7 @@ export default function Partners() {
           <div className="flex flex-wrap -m-4">
             {partners.map((item, index) => {
               return (
-                <div className="p-4 md:w-1/2 w-full">
+                <div className="p-4 md:w-1/2 w-full" key={index}>
                   <div className="h-full bg-gray-100 p-8 rounded">
                     <img src={item.logo} alt="logo" width={15} height={15} />
                     <p className="leading-relaxed mb-6">{item.description}</p>
