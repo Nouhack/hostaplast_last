@@ -29,8 +29,8 @@ export default function Home({ blogs }) {
         <div className="grid grid-col-1 md:grid-cols-3 justify-center gap-4 ">
           {blogs.map((item, index) => {
             return (
-              <Link href={`/posts/${item.slug}`}>
-                <div className="max-w-sm" key={index}>
+              <Link href={`/posts/${item.slug}`} key={index}>
+                <div className="max-w-sm">
                   <Card
                     imgAlt="Meaningful alt text for an image that is not purely decorative"
                     imgSrc={item.thumbnail}
