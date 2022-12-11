@@ -96,6 +96,16 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
 
+      - label: "slider"
+        name: "slider"
+        file: "content/slider.md"
+        fields:
+          - label: "slider"
+            name: "slider"
+            widget: list
+            fields:
+              - { label: "Image", name: "logo", widget: "image" }
+
       - label: "Detail de la solution"
         name: "solution_detail"
         file: "content/solution_details.md"

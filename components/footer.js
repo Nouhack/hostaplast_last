@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 import { attributes, react as HomeContent } from "../content/metadata.md";
 
 export default function Footer() {
@@ -22,18 +24,30 @@ export default function Footer() {
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-gray-600 hover:text-gray-800">
+                <Link href="/aboutus" class="text-gray-600 hover:text-gray-800">
                   À propos de nous
-                </a>
+                </Link>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Nos Valeurs</a>
+                <Link class="text-gray-600 hover:text-gray-800" href="/value">
+                  Nos Valeurs
+                </Link>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Avantages</a>
+                <Link
+                  href="/advantages"
+                  class="text-gray-600 hover:text-gray-800"
+                >
+                  Avantages
+                </Link>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Solution</a>
+                <Link
+                  class="text-gray-600 hover:text-gray-800"
+                  href="/solution"
+                >
+                  Solution
+                </Link>
               </li>
             </nav>
           </div>
@@ -43,13 +57,22 @@ export default function Footer() {
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Contact us</a>
+                <Link
+                  class="text-gray-600 hover:text-gray-800"
+                  href="/contactus"
+                >
+                  Contact us
+                </Link>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Facebook</a>
+                <Link href="#" class="text-gray-600 hover:text-gray-800">
+                  Facebook
+                </Link>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Twitter</a>
+                <Link href="#" class="text-gray-600 hover:text-gray-800">
+                  Twitter
+                </Link>
               </li>
             </nav>
           </div>
@@ -59,12 +82,14 @@ export default function Footer() {
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+                <Link href="#" class="text-gray-600 hover:text-gray-800">
+                  Privacy Policy
+                </Link>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800">
+                <Link href="#" class="text-gray-600 hover:text-gray-800">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
             </nav>
           </div>
@@ -92,14 +117,14 @@ export default function Footer() {
       <div class="bg-gray-100">
         <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p class="text-gray-500 text-sm text-center sm:text-left">
-            © 2020 Tailblocks —
+            © {new Date().getFullYear()} Live tracking plus—
             <a
               href="https://twitter.com/knyttneve"
               rel="noopener noreferrer"
               target="_blank"
               class="text-gray-600 ml-1"
             >
-              @knyttneve
+              @HOSTAPLAST
             </a>
           </p>
           <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">

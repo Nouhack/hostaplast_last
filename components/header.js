@@ -41,15 +41,17 @@ export default function Header() {
         </Navbar.displayName>
       </Link>
       <div className="flex md:order-2">
-        <Button
-          pill
-          style={{
-            backgroundColor: theme,
-          }}
-        >
-          Espace client
-          <HiOutlineArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <Link href="/client" passHref>
+          <Button
+            pill
+            style={{
+              backgroundColor: theme,
+            }}
+          >
+            Espace client
+            <HiOutlineArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </Link>
         <Navbar.Toggle />
       </div>
 
