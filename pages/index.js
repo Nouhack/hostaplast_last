@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Carousel from "../components/carousel";
 import Details from "../components/detail";
 import Features from "../components/features";
@@ -25,23 +26,25 @@ export default function Home({ blogs }) {
         <h1 className="sm:text-3xl text-2xl font-medium title-font text-center mt-10 text-gray-900 mb-20">
           Les dernières nouvelles
         </h1>
-        <div className="grid grid-col-1 md:grid-cols-3 justify-center gap-4">
+        <div className="grid grid-col-1 md:grid-cols-3 justify-center gap-4 ">
           {blogs.map((item, index) => {
             return (
-              <div className="max-w-sm " key={index}>
-                <Card
-                  imgAlt="Meaningful alt text for an image that is not purely decorative"
-                  imgSrc={item.thumbnail}
-                  className="object-cover"
-                >
-                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    {item.title}
-                  </h5>
-                  <p className="font-normal truncate text-gray-700 dark:text-gray-400">
-                    {item.shortdescription}
-                  </p>
-                </Card>
-              </div>
+              <Link href={`/posts/${item.slug}`}>
+                <div className="max-w-sm" key={index}>
+                  <Card
+                    imgAlt="Meaningful alt text for an image that is not purely decorative"
+                    imgSrc={item.thumbnail}
+                    className="object-cover h-full"
+                  >
+                    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      {item.title}
+                    </h5>
+                    <p className="font-normal truncate text-gray-700 dark:text-gray-400">
+                      {item.shortdescription}
+                    </p>
+                  </Card>
+                </div>
+              </Link>
             );
           })}
         </div>
