@@ -2,11 +2,13 @@ import Head from "next/head";
 import Carousel from "../components/carousel";
 import Details from "../components/detail";
 import Features from "../components/features";
-import LastNews from "../components/last_news";
 import Partners from "../components/partners";
+import { Card, Button } from "flowbite-react";
 import Script from "next/script";
+import fs from "fs";
+import matter from "gray-matter";
 
-export default function Home() {
+export default function Home({ blogs }) {
   return (
     <div>
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
@@ -18,8 +20,55 @@ export default function Home() {
       <Carousel />
       <Details />
       <Features />
-      <LastNews />
+
+      <>
+        <h1 className="sm:text-3xl text-2xl font-medium title-font text-center mt-10 text-gray-900 mb-20">
+          Les dernières nouvelles
+        </h1>
+        <div className="grid grid-col-1 md:grid-cols-3 justify-center gap-4">
+          {blogs.map((item, index) => {
+            return (
+              <div className="max-w-sm " key={index}>
+                <Card
+                  imgAlt="Meaningful alt text for an image that is not purely decorative"
+                  imgSrc={item.thumbnail}
+                  className="object-cover"
+                >
+                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {item.title}
+                  </h5>
+                  <p className="font-normal truncate text-gray-700 dark:text-gray-400">
+                    {item.shortdescription}
+                  </p>
+                </Card>
+              </div>
+            );
+          })}
+        </div>
+      </>
       <Partners />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  // List of files in blgos folder
+  const filesInBlogs = fs.readdirSync("./content/posts");
+
+  // Get the front matter and slug (the filename without .md) of all files
+  const blogs = filesInBlogs.map((filename) => {
+    const file = fs.readFileSync(`./content/posts/${filename}`, "utf8");
+    const matterData = matter(file);
+
+    return {
+      ...matterData.data, // matterData.data contains front matter
+      slug: filename.slice(0, filename.indexOf(".")),
+    };
+  });
+
+  return {
+    props: {
+      blogs,
+    },
+  };
 }

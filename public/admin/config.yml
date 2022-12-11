@@ -23,6 +23,22 @@ collections:
       - { label: "Short description", name: "shortdescription", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "partners"
+    label: "Nos partenaires"
+    files:
+      - label: "Nos partenaires"
+        name: "metadata"
+        file: "content/partners.md"
+        fields:
+          - label: "Partenaires"
+            name: "partners"
+            widget: list
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Alias", name: "alias", widget: "string" }
+              - { label: "logo", name: "logo", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+
   - name: "generalinfo"
     label: "Information general"
     files:
