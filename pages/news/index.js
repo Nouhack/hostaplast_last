@@ -4,15 +4,13 @@ import Link from "next/link";
 import Head from "next/head";
 import React from "react";
 import { Card, Button } from "flowbite-react";
-import { attributes, react as HomeContent } from "../../content/news.md";
 import { attributes as meta_attributes } from "../../content/metadata.md";
 
 export default function Nouh({ blogs }) {
-  let { title, news } = attributes;
   let { theme } = meta_attributes;
 
   return (
-    <div className="gap-5 flex flex-col w-full">
+    <div className="mt-32 gap-5 flex flex-col w-full">
       {blogs.map((item, index) => {
         return (
           <Card key={index}>

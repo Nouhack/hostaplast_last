@@ -23,38 +23,6 @@ collections:
       - { label: "Short description", name: "shortdescription", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "news"
-    label: "Nouvelle / evenement de hostaplast"
-    files:
-      - label: "Nouvelle / evenement de hostaplast"
-        name: "news"
-        file: "content/news.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - label: "news"
-            name: "news"
-            widget: list
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - {
-                  label: "Short description",
-                  name: "shortdescription",
-                  widget: "text",
-                }
-              - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-              - { label: "Content", name: "content", widget: "markdown" }
-              - {
-                  label: "Slug",
-                  name: "slug",
-                  widget: "string",
-                  pattern:
-                    [
-                      "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-                      "A slug can have no spaces or special characters",
-                    ],
-                  required: true,
-                }
-
   - name: "generalinfo"
     label: "Information general"
     files:
@@ -98,7 +66,7 @@ collections:
         name: "values"
         file: "content/value.md"
         fields:
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "Descriotion", widget: "markdown" }
 
       - label: "Nos fonctionnalités"
         name: "features"

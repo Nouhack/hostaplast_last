@@ -4,11 +4,11 @@ import MarkdownWrapper from "../components/markdownWrapper";
 import ReactMarkdown from "react-markdown";
 
 export default function value() {
-  let { body } = attributes;
+  let { description } = attributes;
 
   return (
     <div className="prose mt-32">
-      <ReactMarkdown>{body}</ReactMarkdown>
+      <ReactMarkdown>{description}</ReactMarkdown>
     </div>
   );
 }
