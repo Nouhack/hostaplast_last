@@ -19,7 +19,12 @@ export default function Header() {
       <Link href="/">
         <Navbar.displayName className="flex flex-row">
           <img src={logo} className="mr-3 h-10 sm:h-16" alt="Flowbite Logo" />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+          <span
+            className="font-mono self-center whitespace-nowrap font-bold hidden sm:block text-xl font-semibold dark:text-white"
+            style={{
+              fontFamily: "'Unbounded', cursive",
+            }}
+          >
             {logolabel}
           </span>
         </Navbar.displayName>
