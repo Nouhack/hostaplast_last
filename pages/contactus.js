@@ -88,7 +88,7 @@ export default function contactus() {
               Envoyer
             </button>
             <p className="text-xs text-gray-500 mt-3">
-              envoyez-nous votre message et nous serons plus qu'heureux de vous
+              envoyez-nous votre message et nous serons plus heureux de vous
               répondre
             </p>
           </form>
