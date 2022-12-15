@@ -34,24 +34,24 @@ const Slider = ({ state }) => {
         }}
       >
         <Sidebar.ItemGroup>
-          <Sidebar.Item href="#" icon={HiHome}>
+          <Sidebar.Item icon={HiHome} href="/">
             Accueil
           </Sidebar.Item>
           <Sidebar.Collapse icon={HiOfficeBuilding} label="Notre compagnie">
-            <Sidebar.Item href="#">À propos de nous</Sidebar.Item>
-            <Sidebar.Item href="#">Valeurs</Sidebar.Item>
+            <Sidebar.Item href="/aboutus">À propos de nous</Sidebar.Item>
+            <Sidebar.Item href="/value">Valeurs</Sidebar.Item>
           </Sidebar.Collapse>
           <Sidebar.Collapse
             icon={HiQuestionMarkCircle}
             label="Pour quoi nous ?"
           >
-            <Sidebar.Item href="#">Avantages</Sidebar.Item>
-            <Sidebar.Item href="#">Solutions</Sidebar.Item>
+            <Sidebar.Item href="/advantages">Avantages</Sidebar.Item>
+            <Sidebar.Item href="/solution">Solutions</Sidebar.Item>
           </Sidebar.Collapse>
-          <Sidebar.Item href="#" icon={HiNewspaper}>
+          <Sidebar.Item href="/news" icon={HiNewspaper}>
             Nouvelles
           </Sidebar.Item>
-          <Sidebar.Item href="#" icon={MdContactSupport}>
+          <Sidebar.Item href="/contactus" icon={MdContactSupport}>
             Contactez nous
           </Sidebar.Item>
         </Sidebar.ItemGroup>
