@@ -5,19 +5,6 @@ export default function contactus() {
   let { theme } = attributes;
   return (
     <section className="w-screen text-gray-600 body-font relative ">
-      <div className="absolute inset-0 bg-gray-300">
-        <iframe
-          frameborder="0"
-          width="100%"
-          height="100%"
-          marginheight="0"
-          marginwidth="0"
-          title="map"
-          scrolling="no"
-          src="https://maps.google.com/maps?&q=algiers sebala&z=14&t=q&output=embed"
-          id="iwjv"
-        ></iframe>
-      </div>
       <div className="container px-5 py-24 mx-auto flex">
         <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
           <form
@@ -67,7 +54,7 @@ export default function contactus() {
               Envoyer
             </button>
             <p className="text-xs text-gray-500 mt-3">
-              envoyez-nous votre message et nous serons plus qu'heureux de vous
+              envoyez-nous votre message et nous serons plus heureux de vous
               répondre
             </p>
           </form>
