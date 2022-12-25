@@ -26,11 +26,11 @@ export default function Home({ blogs }) {
         <h1 className="sm:text-3xl text-2xl font-medium title-font text-center mt-10 text-gray-900 mb-20">
           Les dernières nouvelles
         </h1>
-        <div className="grid grid-col-1 md:grid-cols-3 justify-center gap-4 ">
+        <div className="grid  grid-col-1 md:grid-cols-3 justify-center gap-4 ">
           {blogs.map((item, index) => {
             return (
               <Link href={`/posts/${item.slug}`} key={index}>
-                <div className="max-w-sm">
+                <div className="h-full max-w-sm">
                   <Card
                     imgAlt="Meaningful alt text for an image that is not purely decorative"
                     imgSrc={item.thumbnail}
